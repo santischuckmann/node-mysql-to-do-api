@@ -11,6 +11,7 @@ const sequelize = new Sequelize(
   }
 );
 
+
 const Task = TaskModel(sequelize, Sequelize)
 
 sequelize.sync({ force: false })
