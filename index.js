@@ -9,7 +9,7 @@ const port = process.env.PORT || 3001;
 app.use(express.json());
 
 app.use(cors({
-  origin: 'http://localhost:3'
+  origin: 'http://localhost:3 localhost/:1000'
 }))
 
 const apiRouter = require('./routes/api')
