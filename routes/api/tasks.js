@@ -21,13 +21,13 @@ router.get('/:id', async (req,res) => {
 })
 
 router.post('/', async (req,res) => {
-  const name = req.body != "" ? req.body : "New task";
+  const name = req.body ? req.body : "New task";
   const task = await Task.create(name);
   res.status(200).json(task)
 })
 
 router.patch('/:id', async (req,res) => {
-  const name = req.body != "" ? req.body : "Updated task";
+  const name = req.body ? req.body : "Updated task";
   const task = await Task.update (
     {name: name, isDone:req.body.isDone}, {
     where: {
