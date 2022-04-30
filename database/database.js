@@ -14,7 +14,7 @@ const sequelize = new Sequelize(
 
 const Task = TaskModel(sequelize, Sequelize)
 
-sequelize.sync({ force: false })
+sequelize.sync({ force: false, alter: true})
 .then(() => {
   console.log('Estan sincronizadas las tablas')
 })
