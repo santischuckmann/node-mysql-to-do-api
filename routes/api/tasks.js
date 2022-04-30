@@ -27,7 +27,7 @@ router.post('/', async (req,res) => {
 })
 
 router.patch('/:id', async (req,res) => {
-  const name = req.body;
+  const name = req.body.name;
   const task = await Task.update (
     {name: name, isDone:req.body.isDone}, {
     where: {
