@@ -3,6 +3,7 @@ const app = express();
 require('express-async-errors')
 const { sequelize } = require('./database/database')
 const cors = require('cors');
+require('newrelic');
 
 const port = process.env.PORT || 3001;
 
