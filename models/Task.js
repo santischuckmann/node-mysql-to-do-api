@@ -15,6 +15,3 @@ module.exports = (sequelize, type) => {
      }
   })
 }
-
-
-// have to create database table, read sequelize docs

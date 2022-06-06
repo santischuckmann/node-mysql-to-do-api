@@ -46,4 +46,9 @@ router.delete('/:id', async (req,res) => {
   res.status(200).send();
 })
 
+router.delete('/', async (req,res) => {
+  const tasks = await Task.destroy({where: {}});
+  res.status(200).send();
+})
+
 module.exports = router;
